@@ -1,6 +1,6 @@
 import { FormButton, Form, FormInput } from './SearchForm.styled';
 import { useState } from 'react';
-import { FcSearch } from 'react-icons/fc';
+import { FaSearch } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
 const SearchForm = ({ setParams }) => {
@@ -19,7 +19,7 @@ const SearchForm = ({ setParams }) => {
     <Form onSubmit={handleSubmit}>
       <FormInput type="text" name="search" onChange={handleChange} />
       <FormButton type="submit">
-        <FcSearch size="30" />
+        <FaSearch size="30" />
       </FormButton>
     </Form>
   );
