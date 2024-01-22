@@ -1,7 +1,6 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import SharedLayout from './SharedLayout/SharedLayout';
-import Loader from 'components/Loader/Loader';
 
 const Home = lazy(() => import('../pages/Home/Home'));
 const MovieDetails = lazy(() => import('../pages/MovieDetails/MovieDetails'));
@@ -24,12 +23,4 @@ const App = () => {
   );
 };
 
-const AppWithSuspense = () => {
-  return (
-    <Suspense fallback={<Loader />}>
-      <App />
-    </Suspense>
-  );
-};
-
-export default AppWithSuspense;
+export default App;
